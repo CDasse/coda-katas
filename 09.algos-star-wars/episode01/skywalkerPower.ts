@@ -4,7 +4,13 @@ export type Jedi = {
     children: Jedi[]
 }
 
+function skywalkerPowerFor(children: Jedi[]) {
+    return children.reduce((res, current) =>
+            res + skywalkerPower(current),
+        0);
+}
+
+
 export function skywalkerPower(root: Jedi): number {
-    // TODO
-    return 0;
+    return root.power + skywalkerPowerFor(root.children);
 }

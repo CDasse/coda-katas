@@ -2,6 +2,10 @@ import { describe, it, expect } from 'vitest';
 import {droidTransmission} from "./droidTransmission";
 
 describe('Episode 8: La Transmission Droïde', () => {
+    it('generate no term', () => {
+        expect(droidTransmission(0)).toBe('');
+    })
+
     it('generates first term', () => {
         expect(droidTransmission(1)).toBe('1');
     });

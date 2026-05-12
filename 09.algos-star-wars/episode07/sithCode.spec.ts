@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import {describe, expect, it} from 'vitest';
 import {isSithCode} from "./sithCode";
 
 describe('Episode 7: Le Code Sith', () => {
@@ -11,10 +11,11 @@ describe('Episode 7: Le Code Sith', () => {
     it('detects non-palindrome codes', () => {
         expect(isSithCode('sith')).toBe(false);
         expect(isSithCode('empire')).toBe(false);
+        expect(isSithCode('stars')).toBe(false);
     });
 
     it('handles empty string', () => {
-        expect(isSithCode('')).toBe(true);
+        expect(isSithCode('')).toBe(false);
     });
 
     it('handles single character', () => {
